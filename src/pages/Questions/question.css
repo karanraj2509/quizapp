@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+.question-whole {
+  background-color: #a52a2a;
+  width: 100vw;
+  height: fit-content;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.loading_text {
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+.questionPage {
+  background-color: peru;
+  position: relative;
+  box-shadow: 0 0 10px #000;
+  color: #fff;
+  width: min(98vw, 800px);
+  height: fit-content;
+  padding: 2.5rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+}
+
+.questionPage .category {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 2.5rem;
+}
+
+.questionPage .category span {
+  color: #a52a2a;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.questionPage > header {
+  width: fit-content;
+  font-size: 1.6rem;
+  margin: 3rem auto;
+  font-style: oblique;
+  border-bottom: 1px solid #310331;
+  padding-bottom: 10px;
+}
+
+.questionPage .questionSepSep {
+  border: 1px solid #777;
+  width: 100%;
+  height: fit-content;
+  min-height: 200px;
+  padding: 10px 1rem;
+  font-size: 1.3rem;
+}
+
+.questionPage .alternatives {
+  display: flex;
+  flex-wrap: nowrap;
+  width: fit-content;
+  margin: 2rem 0 1rem;
+}
+
+.alternatives button {
+  color: #fff;
+  border: none;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  padding: 10px 1rem;
+  transition: 0.5s;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.alternatives .true_btn {
+  background-color: #310331;
+}
+
+.alternatives .false_btn {
+  background-color: maroon;
+}
+
+.alternatives .true_btn:hover {
+  background-color: maroon;
+  box-shadow: 0 0 10px #fff;
+}
+
+.alternatives .false_btn:hover {
+  background-color: #310331;
+  box-shadow: 0 0 10px #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .alternatives .true_btn:hover {
+    background-color: #310331;
+    box-shadow: none;
+  }
+
+  .alternatives .false_btn:hover {
+    background-color: maroon;
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .questionPage {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 2.5rem 1.5rem;
+    border-radius: 0;
+  }
+
+  .questionPage > header {
+    font-size: 1.3rem;
+    margin: 5rem auto 3rem;
+  }
+}
